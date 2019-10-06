@@ -1,0 +1,60 @@
+package com.Onboarding;
+
+import org.openqa.selenium.By;
+
+public abstract class SignUpPatientPageBot {
+	
+	public static By emailAddressField()
+	{
+		String emailAddy = "//*[@id='temporaryEmail']";
+		
+		return By.xpath(emailAddy);
+		
+	}
+	
+	public static By firstName()
+	{
+		String firstName = "//*[@id='firstName']";
+		
+		return By.xpath(firstName);
+		
+	}
+	
+	
+	public static By lastName()
+	{
+		String lastName = "//*[@id='lastName']";
+		
+		return By.xpath(lastName);
+		
+	}
+	
+	
+	public static By password()
+	{
+		String password = "//*[@id='password']";
+		
+		return By.xpath(password);
+		
+	}
+	
+	public static By privacyAccept()
+	{
+		String privacyAccept = "//button[text()='Start my visit']//preceding::div[1]";
+		
+		return By.xpath(privacyAccept);
+		
+	}
+	
+	
+	public static By submit()
+	{
+		String privacyAccept = "//button[text()='Start my visit']/preceding::div[1]";
+		
+		return By.xpath(privacyAccept);
+		
+	}
+	
+	
+
+}

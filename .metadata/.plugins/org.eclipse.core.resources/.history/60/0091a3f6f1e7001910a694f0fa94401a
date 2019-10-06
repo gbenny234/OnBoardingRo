@@ -1,0 +1,57 @@
+package com.Onboarding;
+
+import java.io.FileInputStream;
+import java.security.SecureRandom;
+import java.util.Properties;
+import java.util.Random;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class SignUpPatientCommonFunctions {
+	
+    private static final String DATA_FOR_RANDOM_STRING = "abcdefghijklmnopqrstuvwxyz";
+    private static SecureRandom random = new SecureRandom();
+    static Properties prop = new Properties();
+    public static final String Path_Properties = "C:\\Users\\gomotayo\\OnboardingFolder\\OnBoarding\\OnboardingData.properties";
+    
+    
+    /*
+     * This function generates random string. 
+     */
+
+    public static String generateEmail(int length) {
+        if (length < 1) throw new IllegalArgumentException();
+
+        StringBuilder sb = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+
+			// 0-62 (exclusive), random returns 0-61
+            int rndCharAt = random.nextInt(DATA_FOR_RANDOM_STRING.length());
+            char rndChar = DATA_FOR_RANDOM_STRING.charAt(rndCharAt);
+
+            sb.append(rndChar);
+
+        }
+
+        return sb.toString();
+
+    }
+    
+    public static void dataLoad()
+    {
+    	prop.load(new FileInputStream(Path_Properties));
+    }
+    
+    public static String urL()
+    {
+    	String baseUrl = prop.getProperty("roUrl");
+		return baseUrl;
+    	
+    }
+    
+	
+	
+	sSecurity = prop.getProperty("security");
+	sOvpnProfileName = prop.getProperty("OvpnProfileName");
+}

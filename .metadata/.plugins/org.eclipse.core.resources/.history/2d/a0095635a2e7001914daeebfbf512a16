@@ -1,0 +1,21 @@
+package com.Onboarding;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public abstract class ScenerioOne {
+	
+	private static WebDriver driver  = new FirefoxDriver();
+	public static WebDriver getFirefox()
+	{
+		return driver;
+	}
+	
+	public void goToUrl(String Url)
+	{
+		getFirefox().get(Url);
+	}
+	
+	
+
+}

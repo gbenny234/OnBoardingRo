@@ -1,0 +1,59 @@
+package com.Onboarding;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class SignUpPatient extends SignUpPatientPageBot{
+	
+	public class RoHappyPathTest {
+		
+		
+		 WebDriver driver;
+
+		  @BeforeClass
+		  public void setUp() {
+		        System.setProperty("webdriver.gecko.driver", "C:\\Users\\gomotayo\\OnboardingFolder\\geckodriver.exe");
+
+		        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		        capabilities.setCapability("marionette", true);
+		        
+			  driver  = new FirefoxDriver();
+			  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			  driver.get("https://start.ro.co/rory/vaginal-dryness");
+		  }
+		  
+		  @AfterClass
+		  public void tearDown() {
+			  driver.close();
+		  }
+		  @Test
+		  public void roHappyPath() throws InterruptedException {
+			  
+			  
+			  driver.findElement(emailAddressField()).sendKeys("Onburding@gmail.com");
+			  driver.findElement(firstName()).sendKeys("Gbenga");
+			  driver.findElement(lastName()).sendKeys("Omotayo");
+			  driver.findElement(password()).sendKeys("Onboarding1");
+			  driver.findElement(privacyAccept()).click();
+			  driver.findElement(submit()).click();
+			  Assert.assertTrue(driver.findElement(welcomeHeader()).getText().contains("Hi Gbenga"));
+			  
+			  
+			  
+			  
+		  }
+
+}
+}

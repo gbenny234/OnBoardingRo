@@ -1,0 +1,7 @@
+<suite name="ROOnboarding">
+ <test name="roOnboardingTest">
+ <classes>
+ <class name="com.Onboarding.SignUpPatient" />
+ </classes>
+ </test>
+</suite>

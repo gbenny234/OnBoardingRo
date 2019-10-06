@@ -1,0 +1,119 @@
+package com.Onboarding;
+
+import org.openqa.selenium.By;
+
+public abstract class SignUpPatientPageBot {
+	
+	
+    /*
+     * This function returns locator for the email address field
+     */	
+	public static By emailAddressField()
+	{
+		String emailAddy = "//input[@id='temporaryEmail' and @autocomplete='false']";
+		
+		return By.xpath(emailAddy);
+		
+	}
+	
+	public static By firstName()
+	{
+		String firstName = "//*[@id='firstName']";
+		
+		return By.xpath(firstName);
+		
+	}
+	
+	
+	public static By lastName()
+	{
+		String lastName = "//*[@id='lastName']";
+		
+		return By.xpath(lastName);
+		
+	}
+	
+	public static By emailDomainMissing()
+	{
+		String lastName = "//div[text()='Email format invalid']";
+		
+		return By.xpath(lastName);
+		
+	}
+	
+		
+	public static By password()
+	{
+		String password = "//*[@id='password']";
+		
+		return By.xpath(password);
+		
+	}
+	
+	public static By privacyAccept()
+	{
+		String privacyAccept = "//button[text()='Start my visit']//preceding::div[1]";
+		
+		return By.xpath(privacyAccept);
+		
+	}
+	
+	
+	public static By submit()
+	{
+		String privacyAccept = "//button[text()='Start my visit']";
+		
+		return By.xpath(privacyAccept);
+		
+	}
+	
+	public static By welcomeHeader()
+	{
+		String welcomeHeader = "//h2[@class='heading start-heading']";
+		
+		return By.xpath(welcomeHeader);
+		
+	}
+	
+	public static By emailFieldRequired()
+	{
+		String emailFieldRequired = "//*[@id='firstName']//preceding::div[text()='Field required']";
+		
+		return By.xpath(emailFieldRequired);
+		
+	}
+
+	public static By firstNameFieldRequired()
+	{
+		String firstNameFieldRequired = "//*[@id='password']//preceding::div[text()='Field required']";
+		
+		return By.xpath(firstNameFieldRequired);
+		
+	}
+	
+	public static By invalidPasswordNoUppercase()
+	{
+		String invalidPassword = "//*[@id='password']//following::div[text()='Password is not strong enough']";
+		
+		return By.xpath(invalidPassword);
+		
+	}
+	
+	public static By invalidPasswordLenghtLess()
+	{
+		String invalidPasswordLenghtLess = "//*[@id='password']//following::div[text()='Password must be 8 characters or more']";
+		
+		return By.xpath(invalidPasswordLenghtLess);
+		
+	}
+	
+	public static By privacyNotChecked()
+	{
+		String privacyNotChecked = "//input[@name='agreedToTos' and @value='false']";
+		
+		return By.xpath(privacyNotChecked);
+		
+	}
+	
+	
+}

@@ -1,0 +1,42 @@
+package com.Onboarding;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class SignUpPatient extends SignUpPatientPageBot{
+	
+	public class RoHappyPathTest {
+
+		  @BeforeClass
+		  public void setUp() {
+			  
+			  ScenerioOne.goToUrl("https://start.ro.co/rory/vaginal-dryness");
+		  }
+		  }
+		  @AfterClass
+		  public void tearDown() {
+			  ScenerioOne.getDriver().close();
+		  }
+		  @Test
+		  public void roHappyPath() {
+			  
+			  
+			  ScenerioOne.getDriver().findElement(emailAddressField()).sendKeys("Onburding@gmail.com");
+			  ScenerioOne.getDriver().findElement(firstName()).sendKeys("Gbenga");
+			  ScenerioOne.getDriver().findElement(lastName()).sendKeys("Omotayo");
+			  ScenerioOne.getDriver().findElement(privacyAccept()).click();
+			  
+			  
+			  
+		  }
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;com.Onboarding.ScenerioOne.getFirefox()&apos; to &apos;getDriver&apos;&#x0D;&#x0A;- Original project: &apos;OnBoarding&apos;&#x0D;&#x0A;- Original element: &apos;com.Onboarding.ScenerioOne.getFirefox()&apos;&#x0D;&#x0A;- Renamed element: &apos;com.Onboarding.ScenerioOne.getDriver()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;getFirefox&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;com.Onboarding{ScenerioOne.java[ScenerioOne~getFirefox" name="getDriver" references="true" stamp="1570302536687" version="1.0"/>
+</session>

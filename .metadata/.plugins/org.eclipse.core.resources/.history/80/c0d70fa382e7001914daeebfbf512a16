@@ -1,0 +1,25 @@
+package com.Onboarding;
+
+import org.openqa.selenium.By;
+
+public class SignUpPatientPageBot {
+	
+	public static By emailAddressField()
+	{
+		String emailAddy = "//*[@id=\'temporaryEmail']";
+		
+		return By.xpath(emailAddy);
+		
+	}
+	
+	public static By firstName()
+	{
+		String firstName = "//*[@id=\'firstName']";
+		
+		return By.xpath(firstName);
+		
+	}
+	
+	
+
+}

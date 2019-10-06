@@ -1,0 +1,69 @@
+package com.Onboarding;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class SignUpPatient extends SignUpPatientPageBot{
+	
+	public class RoHappyPathTest {
+
+		  @BeforeClass
+		  public void setUp() {
+			  
+			  ScenerioOne.goToUrl("https://start.ro.co/rory/vaginal-dryness");
+		  }
+		  }
+		  @AfterClass
+		  public void tearDown() {
+			  ScenerioOne.
+		  }
+		  @Test
+		  public void roHappyPath() {
+		    // Test name: RoHappyPath
+		    // Step # | name | target | value | comment
+		    // 1 | open | /rory/vaginal-dryness |  | 
+		    driver.get("https://start.ro.co/rory/vaginal-dryness");
+		    // 2 | setWindowSize | 1550x838 |  | 
+		    driver.manage().window().setSize(new Dimension(1550, 838));
+		    // 3 | click | css=.form_field > #temporaryEmail |  | 
+		    driver.findElement(By.cssSelector(".form_field > #temporaryEmail")).click();
+		    // 4 | type | css=.form_field > #temporaryEmail | gbenga43@gmail.com | 
+		    driver.findElement(By.cssSelector(".form_field > #temporaryEmail")).sendKeys("gbenga43@gmail.com");
+		    // 5 | click | css=.sc-feJyhm |  | 
+		    driver.findElement(By.cssSelector(".sc-feJyhm")).click();
+		    // 6 | click | id=firstName |  | 
+		    driver.findElement(By.id("firstName")).click();
+		    // 7 | type | id=firstName | Gbenga | 
+		    driver.findElement(By.id("firstName")).sendKeys("Gbenga");
+		    // 8 | click | css=.sc-feJyhm |  | 
+		    driver.findElement(By.cssSelector(".sc-feJyhm")).click();
+		    // 9 | click | id=lastName |  | 
+		    driver.findElement(By.id("lastName")).click();
+		    // 10 | type | id=lastName | Omotayo | 
+		    driver.findElement(By.id("lastName")).sendKeys("Omotayo");
+		    // 11 | click | css=.sc-feJyhm |  | 
+		    driver.findElement(By.cssSelector(".sc-feJyhm")).click();
+		    // 12 | click | id=password |  | 
+		    driver.findElement(By.id("password")).click();
+		    // 13 | type | id=password | Adetomi1 | 
+		    driver.findElement(By.id("password")).sendKeys("Adetomi1");
+		    // 14 | click | css=.sc-fMiknA |  | 
+		    driver.findElement(By.cssSelector(".sc-fMiknA")).click();
+		    // 15 | click | css=.sc-bxivhb |  | 
+		    driver.findElement(By.cssSelector(".sc-bxivhb")).click();
+		    // 16 | click | css=.heading |  | 
+		    driver.findElement(By.cssSelector(".heading")).click();
+		    // 17 | assertText | css=.heading | Hi Gbenga,\nthanks for starting your\nonline visit. | 
+		    assertThat(driver.findElement(By.cssSelector(".heading")).getText(), is("Hi Gbenga,\\\\nthanks for starting your\\\\nonline visit."));
+		  }
+
+}

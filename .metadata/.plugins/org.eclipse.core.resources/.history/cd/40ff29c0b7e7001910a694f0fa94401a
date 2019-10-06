@@ -1,0 +1,7 @@
+<suite name="ROOnboarding">
+ <test name="roOnboardingTest">
+ <classes>
+ <class name="softwareTestingMaterial.STMTestNGClass" />
+ </classes>
+ </test>
+</suite>
